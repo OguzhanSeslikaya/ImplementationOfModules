@@ -22,5 +22,11 @@ namespace ModulesForSubtree.BannersModule.Controllers
 
             return Ok();
         }
+
+        [HttpGet("Second")]
+        public async Task<IActionResult> Second()
+        {
+            return Ok();
+        }
     }
 }
