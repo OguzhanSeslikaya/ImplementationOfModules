@@ -11,7 +11,7 @@ namespace ModulesForSubtree.BannersModule.Controllers
         [HttpGet]
         public async Task<IActionResult> List()
         {
-            //denemeasd
+            //deneme
             return Ok(await bannersService.List());
         }
 
