@@ -12,7 +12,6 @@ namespace ModulesForSubtree.BannersModule.Controllers
         [HttpGet]
         public async Task<IActionResult> List()
         {
-            //deneme
             return Ok(await bannersService.List());
         }
 
@@ -25,7 +24,7 @@ namespace ModulesForSubtree.BannersModule.Controllers
         }
 
         [HttpGet("First")]
-        public async Task<IActionResult> deneme()
+        public async Task<IActionResult> First()
         {
             return Ok(await campaignsService.Get());
         }
