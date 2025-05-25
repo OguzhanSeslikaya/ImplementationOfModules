@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ModulesForSubtree.BannersModule.Services;
 using ModulesForSubtree.BannersModule.Services.Dtos;
+using ModulesForSubtree.CampaignsModule.Services;
 
 namespace ModulesForSubtree.BannersModule.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BannersController(IBannersService bannersService) : ControllerBase
+    public class BannersController(IBannersService bannersService, ICampaignsService campaignsService) : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> List()
@@ -20,6 +21,12 @@ namespace ModulesForSubtree.BannersModule.Controllers
             await bannersService.Create(request);
 
             return Ok();
+        }
+
+        [HttpGet("First")]
+        public async Task<IActionResult> deneme()
+        {
+            return Ok(await campaignsService.Get());
         }
     }
 }
