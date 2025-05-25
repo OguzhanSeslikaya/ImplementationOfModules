@@ -12,6 +12,7 @@ namespace ModulesForSubtree.BannersModule.Controllers
         [HttpGet]
         public async Task<IActionResult> List()
         {
+            //denemeasd
             return Ok(await bannersService.List());
         }
 
@@ -27,6 +28,12 @@ namespace ModulesForSubtree.BannersModule.Controllers
         public async Task<IActionResult> First()
         {
             return Ok(await campaignsService.Get());
+        }
+
+        [HttpGet("Second")]
+        public async Task<IActionResult> Second()
+        {
+            return Ok();
         }
     }
 }
