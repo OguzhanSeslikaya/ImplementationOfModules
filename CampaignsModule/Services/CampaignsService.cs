@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ImplementationOfModules.CampaignsModule.Services.Dtos;
+using Microsoft.EntityFrameworkCore;
 using ModulesForSubtree.CampaignsModule.Contexts;
 using ModulesForSubtree.CampaignsModule.Entities;
 using ModulesForSubtree.CampaignsModule.Services.Dtos;
@@ -16,6 +17,16 @@ namespace ModulesForSubtree.CampaignsModule.Services
             });
 
             await campaignsDbContext.SaveChangesAsync();
+        }
+
+        public async Task<CampaignsFirstResult?> Get()
+        {
+            return await campaignsDbContext.Campaigns.Select(a => new CampaignsFirstResult
+            {
+                Id = a.Id,
+                CreatedDate = a.CreatedDate,
+                Name = a.Name
+            }).FirstOrDefaultAsync();
         }
 
         public async Task<List<CampaignsListResult>> List()

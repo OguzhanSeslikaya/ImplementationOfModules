@@ -21,5 +21,11 @@ namespace ModulesForSubtree.CampaignsModule.Controllers
 
             return Ok();
         }
+
+        [HttpGet("First")]
+        public async Task<IActionResult> deneme()
+        {
+            return Ok(await campaignsService.Get());
+        }
     }
 }
