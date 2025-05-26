@@ -35,5 +35,11 @@ namespace ModulesForSubtree.BannersModule.Controllers
         {
             return Ok();
         }
+
+        [HttpGet("Conflict2")]
+        public async Task<IActionResult> Conflict2()
+        {
+            return Ok();
+        }
     }
 }
