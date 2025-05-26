@@ -12,7 +12,7 @@ namespace ModulesForSubtree.BannersModule.Controllers
         [HttpGet]
         public async Task<IActionResult> List()
         {
-            //deneme
+            //deneme.
             return Ok(await bannersService.List());
         }
 
