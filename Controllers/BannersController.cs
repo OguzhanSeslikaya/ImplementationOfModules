@@ -11,7 +11,7 @@ namespace ModulesForSubtree.BannersModule.Controllers
         [HttpGet]
         public async Task<IActionResult> List()
         {
-            //deneme
+            //deneme.
             return Ok(await bannersService.List());
         }
 
@@ -29,8 +29,8 @@ namespace ModulesForSubtree.BannersModule.Controllers
             return Ok();
         }
 
-        [HttpGet("Conflict1")]
-        public async Task<IActionResult> Conflict1()
+        [HttpGet("Conflict3")]
+        public async Task<IActionResult> Conflict3()
         {
             return Ok();
         }
